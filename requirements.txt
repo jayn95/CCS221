@@ -1,1 +1,6 @@
 streamlit
+numpy
+scikit-learn
+opencv-python-headless
+matplotlib
+tensorflow
