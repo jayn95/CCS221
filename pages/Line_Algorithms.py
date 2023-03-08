@@ -2,8 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 st.title("Bresenham Algorithm")
-st.xlabel("X Axis")
-st.ylabel("Y Axis")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
 
 def bres(x1,y1,x2,y2):
     x,y = x1,y1
@@ -58,10 +58,10 @@ def DDALine(x1, y1, x2, y2, color):
 
 
 def main():
-    x1 = int(input("Enter the Starting point of x: "))
-    y1 = int(input("Enter the Starting point of y: "))
-    x2 = int(input("Enter the end point of x: "))
-    y2 = int(input("Enter the end point of y: "))
+    x1 = st.text_input("Enter the Starting point of x: ")
+    y1 = st.text_input("Enter the Starting point of y: ")
+    x2 = st.text_input("Enter the end point of x: ")
+    y2 = st.text_input("Enter the end point of y: ")
     color = ".r"
 
     bres(x1, y1, x2, y2)
