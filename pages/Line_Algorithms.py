@@ -2,8 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 st.title("Bresenham Algorithm")
-plt.xlabel("X Axis")
-plt.ylabel("Y Axis")
+st.xlabel("X Axis")
+st.ylabel("Y Axis")
 
 def bres(x1,y1,x2,y2):
     x,y = x1,y1
