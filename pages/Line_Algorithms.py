@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-plt.title("Bresenham Algorithm")
+st.title("Bresenham Algorithm")
 plt.xlabel("X Axis")
 plt.ylabel("Y Axis")
 
@@ -37,8 +37,8 @@ def bres(x1,y1,x2,y2):
         ycoordinates.append(y)
 
 
-    plt.plot(xcoordinates, ycoordinates)
-    st.pyplot()
+    fig = plt.plot(xcoordinates, ycoordinates)
+    st.pyplot(fig)
 
 def DDALine(x1, y1, x2, y2, color):
     dx = x2 - x1 
