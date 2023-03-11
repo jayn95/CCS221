@@ -1,3 +1,4 @@
+import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -28,8 +29,8 @@ def _plt_basic_object_(points):
     plt.ylabel("Y-Axis")
 
     #Graph title
-    plt.title("Diamond")
-    plt.show()
+    st.title("Diamond")
+    st.pyplot(fig)
 
 #shows/give points for cube (manipulate second method if you want to make other objects)
 def _diamond_(bottom_lower=(0, 0, 0), side_length=3):
@@ -80,4 +81,5 @@ def main():
     _plt_basic_object_(translated_cube)
 
 if __name__=='__main__':
-    main()
+    value = main()
+    st.write(value)
