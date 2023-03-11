@@ -2,23 +2,32 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 st.title("Bresenham Algorithm")
-plt.xlabel("X Axis")
-plt.ylabel("Y Axis")
+# plt.xlabel("X Axis")
+# plt.ylabel("Y Axis")
 
 def bres(x1,y1,x2,y2):
     x,y = x1,y1
+    st.write(x, y)
     dx = abs(x2 - x1)
+    st.write(dx)
     dy = abs(y2 -y1)
+    st.write(dy)
     gradient = dy/float(dx)
+    st.write(gradient)
 
     if gradient > 1:
         dx, dy = dy, dx
+        st.write(dx, dy)
         x, y = y, x
+        st.write(x, y)
         x1, y1 = y1, x1
+        st.write(x1, y1)
         x2, y2 = y2, x2
+        st.write(x2, y2)
 
     p = 2*dy - dx
-    print(f"x = {x}, y = {y}")
+    st.write(p)
+    st.write(f"x = {x}, y = {y}")
     # Initialize the plotting points
     xcoordinates = [x]
     ycoordinates = [y]
