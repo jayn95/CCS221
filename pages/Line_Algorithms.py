@@ -83,6 +83,8 @@ color = ".r"
 st.write(color)
 
 DDALine(x1, y1, x2, y2, color)
+value = DDALine(x1, y1, x2, y2, color)
+st.write(value)
 
 #     bres(x1, y1, x2, y2)
     # midpoint(x1, y1, x2, y2)
