@@ -72,8 +72,8 @@ def DDALine(x1, y1, x2, y2, color):
         st.write(x1)
         st.write(y1)
     st.pyplot(fig)
-    result = non_optional_func(*args, **kwargs)
-    fig.savefig(image, **kwargs)
+#     result = non_optional_func(*args, **kwargs)
+#     fig.savefig(image, **kwargs)
 
 
 # def main():
