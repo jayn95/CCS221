@@ -79,11 +79,11 @@ x1 = st.number_input("Enter the Starting point of x: ")
 y1 = st.number_input("Enter the Starting point of y: ")
 x2 = st.number_input("Enter the end point of x: ")
 y2 = st.number_input("Enter the end point of y: ")
-color = ".r"
-st.write(color)
+# color = ".r"
+# st.write(color)
 
-DDALine(x1, y1, x2, y2, color)
-value = DDALine(x1, y1, x2, y2, color)
+DDALine(x1, y1, x2, y2)
+value = DDALine(x1, y1, x2, y2)
 st.write(value)
 
 #     bres(x1, y1, x2, y2)
