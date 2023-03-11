@@ -61,6 +61,13 @@ if uploaded_file is not None:
     # Display the image
     st.image(opencv_image, channels="BGR")
     
+    # Translate image
+    m_translation_ = np.float32([[1,0,100],[0,1,50],[0,0,1]])
+    translated_img_ = cv2.warpPerspective(opencv_image, m_translation_, (width,height))
+
+    plt.axis('off')
+    st.image(translated_img_, channels="BGR")
+    
 # def main():
 # #     picture = ["pic1.jpg", "pic2.png", "pic3.jpg "]
 
