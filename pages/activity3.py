@@ -65,7 +65,7 @@ if uploaded_file is not None:
     st.image(opencv_image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     
     m_translation_ = np.float32([[1,0,100],[0,1,50],[0,0,1]])
-    translated_img_ = cv2.warpPerspective(opencv_image, m_translation_, (width,height))
+    translated_img_ = cv2.warpPerspective(opencv_image, m_translation_)
 
     plt.axis('off')
     st.image(translated_img_, channels="BGR")
