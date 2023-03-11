@@ -51,7 +51,7 @@ import matplotlib.pyplot as plt
 #     plt.show()
 
 
-file = st.file_uploader("Please upload file", type=["jpg", "png"])
+uploaded_file = st.file_uploader("Please upload file", type=["jpg", "png"])
 
 if uploaded_file is not None:
     # Convert the file to an opencv image
