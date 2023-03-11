@@ -1,3 +1,4 @@
+from activity3_functions import *
 import streamlit as st
 import numpy as np
 import cv2
@@ -57,14 +58,17 @@ if uploaded_file is not None:
     # Convert the file to an opencv image
 #     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
 #     opencv_image = cv2.imdecode(file_bytes, 1)
-    image = Image.open(uploaded_file)
-    opencv_image = np.array(image)
+    picture = Image.open(uploaded_file)
+    opencv_image = np.array(picture)
+    opencv_image = cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
     
     # Display the image
-    st.img(opencv_image, channels="BGR")
+#     st.image(opencv_image, channels="BGR")
     
     # Translate image
-    st.img(opencv_image, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    st.image(opencv_image, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    
+    st.image(translation(opencv_image))
     
     
 # def main():
