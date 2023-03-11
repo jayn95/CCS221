@@ -74,21 +74,21 @@ def DDALine(x1, y1, x2, y2, color):
     st.pyplot(fig)
 
 
+# def main():
+x1 = st.text_input("Enter the Starting point of x: ")
+y1 = st.text_input("Enter the Starting point of y: ")
+x2 = st.text_input("Enter the end point of x: ")
+y2 = st.text_input("Enter the end point of y: ")
+color = ".r"
+st.write(color)
 
-def main():
-    x1 = st.text_input("Enter the Starting point of x: ")
-    y1 = st.text_input("Enter the Starting point of y: ")
-    x2 = st.text_input("Enter the end point of x: ")
-    y2 = st.text_input("Enter the end point of y: ")
-    color = ".r"
-    st.write(color)
+DDALine(x1, y1, x2, y2, color)
 
 #     bres(x1, y1, x2, y2)
-    DDALine(x1, y1, x2, y2, color)
     # midpoint(x1, y1, x2, y2)
 
 
 # if __name__ == "__main__":
-main()
+# main()
 
 
