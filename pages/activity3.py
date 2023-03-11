@@ -62,6 +62,6 @@ def main():
         reflection(img_)
         shearing(img_)
         
-main()
-value = main()
-st.write(value)
+if __name__=='__main__':
+    value = main()
+    st.write(value)
