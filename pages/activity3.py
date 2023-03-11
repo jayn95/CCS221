@@ -55,7 +55,7 @@ def main():
 
     for p in picture:
         img_ = cv2.imread(f"{p}")
-        img_ = cv2.cvtColor(img_, cv2.COLOR_BGR2RGB)
+#         img_ = cv2.cvtColor(img_, cv2.COLOR_BGR2RGB)
         translation(img_)
         rotation(img_)
         scaling(img_)
