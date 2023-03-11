@@ -1,3 +1,4 @@
+import streamlit as st
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
@@ -10,7 +11,7 @@ def translation(picture):
     translated_img_ = cv2.warpPerspective(picture, m_translation_, (width,height))
 
     plt.axis('off')
-    plt.imshow(translated_img_)
+    st.image(translated_img_)
     plt.show()
 
 def rotation(picture):
@@ -19,7 +20,7 @@ def rotation(picture):
 
     rotated_img_ = cv2.warpAffine(picture, m_rotation_, (width,height))
     plt.axis('off')
-    plt.imshow(rotated_img_) 
+    st.image(rotated_img_) 
     plt.show()
 
 def scaling(picture):
@@ -28,14 +29,14 @@ def scaling(picture):
     resized_img_.shape
 
     plt.axis('off')
-    plt.imshow(resized_img_)
+    st.image(resized_img_)
     plt.show()
 
 def reflection(picture):
     img_flipped_ = cv2.flip(picture, -1)
 
     plt.axis('off')
-    plt.imshow(img_flipped_)
+    st.image(img_flipped_)
     plt.show()
 
 def shearing(picture):
@@ -46,7 +47,7 @@ def shearing(picture):
     sheared_image_x = cv2.warpPerspective(picture, m_shearing_x, (int(picture.shape[1]*1.5), int(picture.shape[0]*1.5)))
 
     plt.axis('off')
-    plt.imshow(sheared_image_x)
+    st.image(sheared_image_x)
     plt.show()
 
 def main():
@@ -62,3 +63,5 @@ def main():
         shearing(img_)
         
 main()
+value = main()
+st.write(value)
