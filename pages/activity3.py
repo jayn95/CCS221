@@ -58,6 +58,9 @@ if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     opencv_image = cv2.imdecode(file_bytes, 1)
     
+    # Display the image
+    st.image(opencv_image, channels="BGR")
+    
 # def main():
 # #     picture = ["pic1.jpg", "pic2.png", "pic3.jpg "]
 
