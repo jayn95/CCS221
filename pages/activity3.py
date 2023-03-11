@@ -60,7 +60,7 @@ if uploaded_file is not None:
 #     opencv_image = cv2.imdecode(file_bytes, 1)
     picture = Image.open(uploaded_file)
     opencv_image = np.array(picture)
-    opencv_image = cv2.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
+    opencv_image = cv.cvtColor(opencv_image, cv2.COLOR_BGR2RGB)
     
     # Display the image
 #     st.image(opencv_image, channels="BGR")
