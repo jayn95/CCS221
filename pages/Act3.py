@@ -20,6 +20,7 @@ if uploaded_file is not None:
         translated_img_ = cv2.warpPerspective(opencv_image, m_translation_, (width,height))
         
         plt.axis('off')
+        st.title("Translated Image")
         st.image(translated_img_)
 #         st.pyplot()
         
