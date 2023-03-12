@@ -21,7 +21,7 @@ if uploaded_file is not None:
         
         plt.axis('off')
         st.image(translated_img_)
-        st.pyplot()
+#         st.pyplot()
         
     translate = translation(opencv_image)
     st.write(translate)
@@ -33,7 +33,7 @@ if uploaded_file is not None:
         rotated_img_ = cv2.warpAffine(opencv_image, m_rotation_, (width,height))
         plt.axis('off')
         st.image(rotated_img_)
-        st.pyplot()
+#         st.pyplot()
 
     rotate = rotation(opencv_image)
     st.write(rotate)
