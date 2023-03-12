@@ -9,7 +9,7 @@ if uploaded_file is not None:
     # Convert the file to an opencv image
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     opencv_image = cv2.imdecode(file_bytes, 1)
-    st.markdown("<h1 style='text-align: center; color: grey;'>Original Image</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: white;'>Original Image</h1>", unsafe_allow_html=True)
     st.image(opencv_image)
     
     def translation(opencv_image):
