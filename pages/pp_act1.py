@@ -27,7 +27,7 @@ x2 = st.number_input("Enter the end point of x: ")
 y2 = st.number_input("Enter the end point of y: ")
 color = ".r"
 
-value = DDALine(x1, y1, x2, y2, color)
-st.write(value)
+# value = DDALine(x1, y1, x2, y2, color)
+st.write(DDALine(x1, y1, x2, y2, color))
 
 
