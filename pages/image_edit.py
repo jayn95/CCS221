@@ -19,20 +19,21 @@ uploaded_file = st.file_uploader("Please upload file", type=["jpg", "png"])
 if uploaded_file is not None:
     # Convert the file to an opencv image
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-    global opencv_image = cv2.imdecode(file_bytes, 1)
+    opencv_image = cv2.imdecode(file_bytes, 1)
     st.image(opencv_image)
+
+    def rotation(opencv_image):
+        height, width = opencv_image.shape[:2]
+        m_rotation_ = cv2.getRotationMatrix2D((width/2, height/2), 45, 1)
+        
+        rotated_img_ = cv2.warpAffine(opencv_image, m_rotation_, (width,height))
+        plt.axis('off')
+        st.image(rotated_img_)
+        st.pyplot()
+
+    value = rotation(opencv_image)
+    st.write(value)
     
-#     value = rotation(opencv_image)
-#     st.write(value)
 
-def rotation(opencv_image):
-    height, width = opencv_image.shape[:2]
-    m_rotation_ = cv2.getRotationMatrix2D((width/2, height/2), 45, 1)
-
-    rotated_img_ = cv2.warpAffine(opencv_image, m_rotation_, (width,height))
-    plt.axis('off')
-    st.image(rotated_img_) 
-    st.pyplot()
-
-value = rotation(opencv_image)
-st.write(value)
+# value = rotation(opencv_image)
+# st.write(value)
