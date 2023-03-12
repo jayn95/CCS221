@@ -18,7 +18,7 @@ def DDALine(x1, y1, x2, y2, color):
         y1 += Yinc
         
         #scatter plot
-        ax[2].scatter(x=[80, 85, 90], y=[85, 90, 95], c='g', label='Multiple Points')
+#         ax[2].scatter(x=[80, 85, 90], y=[85, 90, 95], c='g', label='Multiple Points')
         
         return fig
         
