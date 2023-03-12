@@ -57,7 +57,7 @@ def translate_obj(points, amount):
 #when calling method from tensoflow call with session, close session to avoid problems after calling
 
 init_octahedron_ = _octahedron_(side_length=3)
-points = tf.constant(init_ctahedron_, dtype=tf.float32)
+points = tf.constant(init_octahedron_, dtype=tf.float32)
 
 # _plt_basic_object_(init_cube_)
 
