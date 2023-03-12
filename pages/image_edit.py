@@ -38,4 +38,14 @@ if uploaded_file is not None:
     rotate = rotation(opencv_image)
     st.write(rotate)
     
+    def scaling(opencv_image):
+        height, width = opencv_image.shape[:2]
+        resized_img_ = cv2.resize(opencv_image, (0,0), fx=0.45, fy=0.7, interpolation=cv2.INTER_AREA)
+        resized_img_.shape
+        
+        plt.axis('off')
+        st.image(resized_img_)
+#         plt.show()
 
+    scale = scaling(opencv_image)
+    st.write(scale)
