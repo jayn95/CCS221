@@ -54,8 +54,8 @@ def DDALine(x1, y1, x2, y2, color):
 #     st.write(dx)
     dy = y2 - y1
 #     st.write(dy)
-    st.write(x2)
-    st.write(y2)
+#     st.write(x2)
+#     st.write(y2)
 
     steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
 #     st.write(steps)
@@ -69,9 +69,8 @@ def DDALine(x1, y1, x2, y2, color):
         fig = plt.plot(int(x1), int(y1), color)
         x1 += Xinc
         y1 += Yinc
-        st.write(x1)
-        st.write(y1)
-    st.pyplot(fig)
+        
+        st.pyplot(fig)
 #     result = non_optional_func(*args, **kwargs)
 #     fig.savefig(image, **kwargs)
 
@@ -84,7 +83,7 @@ y2 = st.number_input("Enter the end point of y: ")
 color = ".r"
 # st.write(color)
 
-DDALine(x1, y1, x2, y2, color)
+# DDALine(x1, y1, x2, y2, color)
 value = DDALine(x1, y1, x2, y2, color)
 st.write(value)
 

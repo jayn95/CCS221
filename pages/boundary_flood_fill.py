@@ -1,7 +1,8 @@
+import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-two_d_arr = np.array([[0,0,0], [0,0,0],[0,0,0]])
+two_d_arr = np.asarray([[0,0,0], [0,0,0],[0,0,0]])
 
 def change(x, y, ColorVal, MoveDirection):
     if MoveDirection == 'u':
@@ -21,18 +22,18 @@ def change(x, y, ColorVal, MoveDirection):
         if y < two_d_arr.shape[1]-1:
             change(x, y+1, ColorVal, MoveDirection)
     else:
-        print('Please Try again')
+        st.write("Please Try again")
     
     img = plt.imshow(two_d_arr, interpolation='none', cmap='plasma')
     img.set_clim([0,80])
     plt.colorbar()
-    plt.show()
+    st.pyplot(img)
 
-def main():
-    x_coord = int(input("Enter X coordinate:"))
-    y_coord = int(input("Enter Y coordinate:"))
-    ColorVal = int(input("Select a Color Value (0-80)"))
-    MoveDirection = input("Direction (u for up, d for down, l for left, or r for right):")
-    change(x_coord, y_coord, ColorVal, MoveDirection)
+# def main():
+x = st.number_input("Enter X coordinate:")
+y = st.number_input("Enter Y coordinate:")
+ColorVal = st.number_input("Select a Color Value (0-80) ")
+MoveDirection = st.text_input("Direction (u for up, d for down, l for left, or r for right: ")
 
-main()
+value = change(x, y, ColorVal, MoveDirection)
+st.write(value)
