@@ -3,17 +3,6 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-# uploaded_file = st.file_uploader("Upload your image here", type=['jpg', 'png', 'jpeg'])
-                                 
-# if uploaded_file is not None:
-#     image = Image.open(uploaded_file)
-#     st.image(image)
-                                 
-# translated_img = np.array(image.convert('RGB'))
-# gray_scale = cv2.cvtColor(translated_img, cv2.COLOR_RGB2GRAY)
-# st.image(grayscale)
-
-# image = cv2.imread("pic1.jpg", cv2.IMREAD_COLOR)
 uploaded_file = st.file_uploader("Please upload file", type=["jpg", "png"])
 
 if uploaded_file is not None:
@@ -21,6 +10,21 @@ if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     opencv_image = cv2.imdecode(file_bytes, 1)
     st.image(opencv_image)
+    
+    def translation(opencv_image):
+        height, width = opencv_image.shape[:2]
+        width = opencv_image.shape[0]
+        height = opencv_image.shape[1]
+        
+        m_translation_ = np.float32([[1,0,100],[0,1,50],[0,0,1]])
+        translated_img_ = cv2.warpPerspective(opencv_image, m_translation_, (width,height))
+        
+        plt.axis('off')
+        st.image(translated_img_)
+        st.pyplot()
+        
+    translate = translation(opencv_image)
+    st.write(translate)
 
     def rotation(opencv_image):
         height, width = opencv_image.shape[:2]
@@ -31,9 +35,7 @@ if uploaded_file is not None:
         st.image(rotated_img_)
         st.pyplot()
 
-    value = rotation(opencv_image)
-    st.write(value)
+    rotate = rotation(opencv_image)
+    st.write(rotate)
     
 
-# value = rotation(opencv_image)
-# st.write(value)
