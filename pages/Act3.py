@@ -21,8 +21,7 @@ if uploaded_file is not None:
         translated_img_ = cv2.warpPerspective(opencv_image, m_translation_, (width,height))
         
         plt.axis('off')
-        st.title("Translated Image")
-        st.markdown("<h1 style='text-align: center; color: grey;'>Translated Image</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: white;'>Translated Image</h1>", unsafe_allow_html=True)
         st.image(translated_img_)
 #         st.pyplot()
         
@@ -35,6 +34,7 @@ if uploaded_file is not None:
         
         rotated_img_ = cv2.warpAffine(opencv_image, m_rotation_, (width,height))
         plt.axis('off')
+        st.markdown("<h1 style='text-align: center; color: white;'>Rotated Image</h1>", unsafe_allow_html=True)
         st.image(rotated_img_)
 #         st.pyplot()
 
@@ -47,6 +47,7 @@ if uploaded_file is not None:
         resized_img_.shape
         
         plt.axis('off')
+        st.markdown("<h1 style='text-align: center; color: white;'>Resized Image</h1>", unsafe_allow_html=True)
         st.image(resized_img_)
 #         plt.show()
 
@@ -57,6 +58,7 @@ if uploaded_file is not None:
         img_flipped_ = cv2.flip(opencv_image, -1)
         
         plt.axis('off')
+        st.markdown("<h1 style='text-align: center; color: white;'>Flipped Image</h1>", unsafe_allow_html=True)
         st.image(img_flipped_)
 #         plt.show()
 
@@ -71,6 +73,7 @@ if uploaded_file is not None:
         sheared_image_x = cv2.warpPerspective(opencv_image, m_shearing_x, (int(opencv_image.shape[1]*1.5), int(opencv_image.shape[0]*1.5)))
         
         plt.axis('off')
+        st.markdown("<h1 style='text-align: center; color: white;'>Sheared Image</h1>", unsafe_allow_html=True)
         st.image(sheared_image_x)
 #         plt.show()
 
