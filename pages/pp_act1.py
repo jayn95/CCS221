@@ -17,24 +17,12 @@ def DDALine(x1, y1, x2, y2, color):
         x1 += Xinc
         y1 += Yinc
         
-        #scatter plot
-#         ax[2].scatter(x=[80, 85, 90], y=[85, 90, 95], c='g', label='Multiple Points')
-        
         return fig
-        
-#         st.pyplot(fig=None, clear_figure=None, **kwargs)
-#     result = non_optional_func(*args, **kwargs)
-#     fig.savefig(image, **kwargs)
-
-
-# def main():
+    
 x1 = st.number_input("Enter the Starting point of x: ")
 y1 = st.number_input("Enter the Starting point of y: ")
 x2 = st.number_input("Enter the end point of x: ")
 y2 = st.number_input("Enter the end point of y: ")
 color = ".r"
-
-# value = DDALine(x1, y1, x2, y2, color)
-# st.write(DDALine(x1, y1, x2, y2, color))
 
 st.pyplot(DDALine(x1, y1, x2, y2, color))
