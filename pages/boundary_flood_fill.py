@@ -30,8 +30,8 @@ def change(x, y, ColorVal, MoveDirection):
     st.pyplot(img)
 
 # def main():
-x_coord = st.number_input("Enter X coordinate:")
-y_coord = st.number_input("Enter Y coordinate:")
+x = st.number_input("Enter X coordinate:")
+y = st.number_input("Enter Y coordinate:")
 ColorVal = st.number_input("Select a Color Value (0-80) ")
 MoveDirection = st.text_input("Direction (u for up, d for down, l for left, or r for right: ")
-st.write(change(x_coord, y_coord, ColorVal, MoveDirection))
+change(x, y, ColorVal, MoveDirection)
