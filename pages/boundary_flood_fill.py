@@ -1,3 +1,4 @@
+import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -26,13 +27,14 @@ def change(x, y, ColorVal, MoveDirection):
     img = plt.imshow(two_d_arr, interpolation='none', cmap='plasma')
     img.set_clim([0,80])
     plt.colorbar()
-    plt.show()
+    st.pyplot(img)
 
 def main():
-    x_coord = int(input("Enter X coordinate:"))
-    y_coord = int(input("Enter Y coordinate:"))
-    ColorVal = int(input("Select a Color Value (0-80)"))
-    MoveDirection = input("Direction (u for up, d for down, l for left, or r for right):")
+    x_coord = st.number_input("Enter X coordinate:"))
+    y_coord = st.number_input("Enter Y coordinate:"))
+    ColorVal = st.number_input("Select a Color Value (0-80)"))
+    MoveDirection = st.text_input("Direction (u for up, d for down, l for left, or r for right):")
     change(x_coord, y_coord, ColorVal, MoveDirection)
 
-main()
+value = main()
+st.write(value)
