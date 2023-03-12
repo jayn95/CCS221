@@ -49,3 +49,13 @@ if uploaded_file is not None:
 
     scale = scaling(opencv_image)
     st.write(scale)
+
+    def reflection(opencv_image):
+        img_flipped_ = cv2.flip(opencv_image, -1)
+        
+        plt.axis('off')
+        st.image(img_flipped_)
+#         plt.show()
+
+    reflect = reflection(opencv_image)
+    st.write(reflect)
