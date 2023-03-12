@@ -30,3 +30,5 @@ def rotation(opencv_image):
     plt.axis('off')
     st.image(rotated_img_) 
     st.pyplot()
+
+rotation()
