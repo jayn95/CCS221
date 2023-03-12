@@ -33,4 +33,4 @@ color = ".r"
 # value = DDALine(x1, y1, x2, y2, color)
 # st.write(DDALine(x1, y1, x2, y2, color))
 
-st.pyplot(DDALine())
+st.pyplot(DDALine(x1, y1, x2, y2, color))
