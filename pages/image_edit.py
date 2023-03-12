@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import cv2
+import matplotlib.pyplot as plt
 
 # uploaded_file = st.file_uploader("Upload your image here", type=['jpg', 'png', 'jpeg'])
                                  
@@ -20,3 +21,12 @@ if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     opencv_image = cv2.imdecode(file_bytes, 1)
     st.image(opencv_image)
+
+def rotation(picture):
+    height, width = picture.shape[:2]
+    m_rotation_ = cv2.getRotationMatrix2D((width/2, height/2), 45, 1)
+
+    rotated_img_ = cv2.warpAffine(picture, m_rotation_, (width,height))
+    plt.axis('off')
+    st.image(rotated_img_) 
+    st.pyplot()
