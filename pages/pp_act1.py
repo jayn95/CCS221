@@ -15,7 +15,7 @@ def DDALine(x1, y1, x2, y2, color):
         x1 += Xinc
         y1 += Yinc
         
-        st.pyplot(fig)
+        st.pyplot(fig=None, clear_figure=None, **kwargs)
 #     result = non_optional_func(*args, **kwargs)
 #     fig.savefig(image, **kwargs)
 
