@@ -59,3 +59,17 @@ if uploaded_file is not None:
 
     reflect = reflection(opencv_image)
     st.write(reflect)
+
+    def shearing(opencv_image):
+        m_shearing_x = np.float32([[1, 0.5, 0],
+                               [0, 1, 0],
+                               [0, 0, 1]])
+        
+        sheared_image_x = cv2.warpPerspective(opencv_image, m_shearing_x, (int(opencv_image.shape[1]*1.5), int(opencv_image.shape[0]*1.5)))
+        
+        plt.axis('off')
+        st.image(sheared_image_x)
+#         plt.show()
+
+    shear = shearing(opencv_image)
+    st.write(shear)
