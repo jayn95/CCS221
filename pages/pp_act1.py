@@ -12,10 +12,13 @@ def DDALine(x1, y1, x2, y2, color):
 
     for i in range(0, int(steps + 1)):
 #         fig = plt.plot(int(x1), int(y1), color)
-        fig, ax = plt.subplots()
+        fig, ax = plt.subplots(x1, y1, figsize=(8, 10). tight_layout=True)
         ax.plot(x1, y1)
         x1 += Xinc
         y1 += Yinc
+        
+        #scatter plot
+        ax[2].scatter(x=[80, 85, 90], y=[85, 90, 95], c='g', label='Multiple Points')
         
         return fig
         
