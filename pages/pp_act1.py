@@ -11,11 +11,14 @@ def DDALine(x1, y1, x2, y2, color):
     Yinc = float(dy / steps)
 
     for i in range(0, int(steps + 1)):
-        fig = plt.plot(int(x1), int(y1), color)
+#         fig = plt.plot(int(x1), int(y1), color)
+        fig, ax = plt.subplots()
         x1 += Xinc
         y1 += Yinc
         
-        st.pyplot(fig=None, clear_figure=None, **kwargs)
+        return fig
+        
+#         st.pyplot(fig=None, clear_figure=None, **kwargs)
 #     result = non_optional_func(*args, **kwargs)
 #     fig.savefig(image, **kwargs)
 
@@ -28,6 +31,6 @@ y2 = st.number_input("Enter the end point of y: ")
 color = ".r"
 
 # value = DDALine(x1, y1, x2, y2, color)
-st.write(DDALine(x1, y1, x2, y2, color))
+# st.write(DDALine(x1, y1, x2, y2, color))
 
-
+st.pyplot(DDALine())
