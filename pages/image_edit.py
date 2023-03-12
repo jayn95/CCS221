@@ -12,5 +12,11 @@ import cv2
 # gray_scale = cv2.cvtColor(translated_img, cv2.COLOR_RGB2GRAY)
 # st.image(grayscale)
 
-image = cv2.imread("pic1.jpg", cv2.IMREAD_COLOR)
-st.image(image)
+# image = cv2.imread("pic1.jpg", cv2.IMREAD_COLOR)
+uploaded_file = st.file_uploader("Please upload file", type=["jpg", "png"])
+
+if uploaded_file is not None:
+    # Convert the file to an opencv image
+    file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
+    opencv_image = cv2.imdecode(file_bytes, 1)
+    st.image(opencv_image)
