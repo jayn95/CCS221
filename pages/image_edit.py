@@ -21,6 +21,9 @@ if uploaded_file is not None:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     opencv_image = cv2.imdecode(file_bytes, 1)
     st.image(opencv_image)
+    
+    value = rotation(opencv_image)
+    st.write(value)
 
 def rotation(opencv_image):
     height, width = opencv_image.shape[:2]
@@ -31,5 +34,5 @@ def rotation(opencv_image):
     st.image(rotated_img_) 
     st.pyplot()
 
-value = rotation(opencv_image)
-st.write(value)
+# value = rotation(opencv_image)
+# st.write(value)
