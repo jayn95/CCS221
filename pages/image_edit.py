@@ -22,11 +22,11 @@ if uploaded_file is not None:
     opencv_image = cv2.imdecode(file_bytes, 1)
     st.image(opencv_image)
 
-def rotation(picture):
-    height, width = picture.shape[:2]
+def rotation(opencv_image):
+    height, width = opencv_image.shape[:2]
     m_rotation_ = cv2.getRotationMatrix2D((width/2, height/2), 45, 1)
 
-    rotated_img_ = cv2.warpAffine(picture, m_rotation_, (width,height))
+    rotated_img_ = cv2.warpAffine(opencv_image, m_rotation_, (width,height))
     plt.axis('off')
     st.image(rotated_img_) 
     st.pyplot()
