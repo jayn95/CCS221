@@ -31,5 +31,5 @@ def rotation(opencv_image):
     st.image(rotated_img_) 
     st.pyplot()
 
-value = rotation()
+value = rotation(opencv_image)
 st.write(value)
