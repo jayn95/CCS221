@@ -1,8 +1,8 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.xlabel("X Axis")
-st.ylabel("Y Axis")
+plt.xlabel("X Axis")
+plt.ylabel("Y Axis")
 
 # def bres(x1,y1,x2,y2):
     
