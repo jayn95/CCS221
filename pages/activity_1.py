@@ -62,7 +62,7 @@ def DDALine(x1, y1, x2, y2, color):
 
     
     plt.plot(xMid, yMid, 'bo')
-    plt.show()
+    st.pyplot()
 
 
 # def midpoint(x1, y1, x2, y2, color):
