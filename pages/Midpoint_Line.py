@@ -13,7 +13,7 @@ def midpoint(x1, y1, x2, y2, color):
     x = x1
     y = y1
 
-    print(f"x = {x}, y = {y}")
+#     print(f"x = {x}, y = {y}")
    
     xcoordinates = [x]
     ycoordinates = [y]
@@ -31,13 +31,13 @@ def midpoint(x1, y1, x2, y2, color):
 
         xcoordinates.append(x)
         ycoordinates.append(y)
-        print(f"x = {x}, y = {y}")
+#         print(f"x = {x}, y = {y}")
 
     xMid = (x1 + x2)/2
     yMid = (y1 + y2)/2 
     
-    plt.plot(xcoordinates, ycoordinates)
-    plt.plot(xMid, yMid, 'ro')
+    st.plot(xcoordinates, ycoordinates)
+    st.plot(xMid, yMid, 'ro')
     st.pyplot
 
 def main():
