@@ -5,6 +5,8 @@ plt.title("Bresenham Line and its Midpoint")
 plt.xlabel("X Axis")
 plt.ylabel("Y Axis")
 
+st.write("Please enter the values of your x1, x2, y1, y2. Then click the Draw button.")
+
 def bres(x1,y1,x2,y2):  
     x,y = x1,y1
     dx = abs(x2 - x1)
@@ -50,8 +52,9 @@ def main():
     x2 = st.number_input("Enter the end point of x: ")
     y2 = st.number_input("Enter the end point of y: ")
     color = ".r"
-
-    bres(x1, y1, x2, y2)
+    
+    if st.button("Draw"):
+        bres(x1, y1, x2, y2)
 
 
 if __name__== "__main__":
