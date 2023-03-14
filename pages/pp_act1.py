@@ -12,12 +12,12 @@ def DDALine(x1, y1, x2, y2, color):
 
     for i in range(0, int(steps + 1)):
         fig = plt.plot(int(x1), int(y1), color)
-        fig, ax = plt.subplots()
-        ax.plot(x1, y1)
+#         fig, ax = plt.subplots()
+#         ax.plot(x1, y1)
         x1 += Xinc
         y1 += Yinc
         
-        return fig
+#         return fig
     
 x1 = st.number_input("Enter the Starting point of x: ")
 y1 = st.number_input("Enter the Starting point of y: ")
@@ -25,4 +25,6 @@ x2 = st.number_input("Enter the end point of x: ")
 y2 = st.number_input("Enter the end point of y: ")
 color = ".r"
 
-st.pyplot(DDALine(x1, y1, x2, y2, color))
+DDALine(x1, y1, x2, y2, color)
+
+st.pyplot()
