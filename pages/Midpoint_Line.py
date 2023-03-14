@@ -38,7 +38,7 @@ def midpoint(x1, y1, x2, y2, color):
     
     plt.plot(xcoordinates, ycoordinates)
     plt.plot(xMid, yMid, 'ro')
-    plt.show()
+    st.pyplot
 
 def main():
     x1 = st.number_input("Enter the Starting point of x: ")
