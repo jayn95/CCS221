@@ -36,9 +36,9 @@ def midpoint(x1, y1, x2, y2, color):
     xMid = (x1 + x2)/2
     yMid = (y1 + y2)/2 
     
-    st.plot(xcoordinates, ycoordinates)
-    st.plot(xMid, yMid, 'ro')
-    st.pyplot
+    plt.plot(xcoordinates, ycoordinates)
+    plt.plot(xMid, yMid, 'ro')
+    st.pyplot(plt)
 
 def main():
     x1 = st.number_input("Enter the Starting point of x: ")
