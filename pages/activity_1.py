@@ -102,10 +102,10 @@ def DDALine(x1, y1, x2, y2, color):
 #     plt.show()
 
 def main():
-    x1 = st.number_input("Enter the Starting point of x: "))
-    y1 = st.number_input("Enter the Starting point of y: "))
-    x2 = st.number_input("Enter the end point of x: "))
-    y2 = st.number_input("Enter the end point of y: "))
+    x1 = st.number_input("Enter the Starting point of x: ")
+    y1 = st.number_input("Enter the Starting point of y: ")
+    x2 = st.number_input("Enter the end point of x: ")
+    y2 = st.number_input("Enter the end point of y: ")
     color = ".r"
 
 #     bres(x1, y1, x2, y2)
