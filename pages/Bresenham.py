@@ -5,8 +5,7 @@ plt.title("Bresenham Line and its Midpoint")
 plt.xlabel("X Axis")
 plt.ylabel("Y Axis")
 
-def bres(x1,y1,x2,y2):
-    
+def bres(x1,y1,x2,y2):  
     x,y = x1,y1
     dx = abs(x2 - x1)
     dy = abs(y2 -y1)
@@ -19,10 +18,15 @@ def bres(x1,y1,x2,y2):
         x2, y2 = y2, x2
 
     p = 2*dy - dx
-    print(f"x = {x}, y = {y}")
+#     print(f"x = {x}, y = {y}")
     
     xcoordinates = [x]
     ycoordinates = [y]
+    
+    #midpoint
+    xMid = (x1 + x2)/2
+    yMid = (y1 + y2)/2 
+    plt.plot(xMid, yMid, 'ro')
 
     for k in range(2, dx + 2):
         if p > 0:
@@ -33,15 +37,11 @@ def bres(x1,y1,x2,y2):
 
         x = x + 1 if x < x2 else x - 1
         
-        print(f"x = {x}, y = {y}")
+#         print(f"x = {x}, y = {y}")
         xcoordinates.append(x)
         ycoordinates.append(y)
-
-    xMid = (x1 + x2)/2
-    yMid = (y1 + y2)/2 
     
     plt.plot(xcoordinates, ycoordinates)
-    plt.plot(xMid, yMid, 'ro')
     st.pyplot()
     
 def main():
