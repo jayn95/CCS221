@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.title("Midpoint of DDA Line")
+plt.title("Midpoint of DDA Line")
 plt.xlabel("X Axis")
 plt.ylabel("Y Axis")
 
