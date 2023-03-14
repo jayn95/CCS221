@@ -27,7 +27,7 @@ def change(x, y, ColorVal, MoveDirection):
     img = plt.imshow(two_d_arr, interpolation='none', cmap='plasma')
     img.set_clim([0,80])
     plt.colorbar()
-    st.pyplot(img)
+    st.pyplot(plt)
 
 # def main():
 x = st.number_input("Enter X coordinate:")
@@ -35,5 +35,4 @@ y = st.number_input("Enter Y coordinate:")
 ColorVal = st.number_input("Select a Color Value (0-80) ")
 MoveDirection = st.text_input("Direction (u for up, d for down, l for left, or r for right: ")
 
-value = change(x, y, ColorVal, MoveDirection)
-st.write(value)
+change(x, y, ColorVal, MoveDirection)
