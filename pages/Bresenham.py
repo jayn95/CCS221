@@ -42,7 +42,7 @@ def bres(x1,y1,x2,y2):
         ycoordinates.append(y)
     
     plt.plot(xcoordinates, ycoordinates)
-    st.pyplot()
+    st.pyplot(plt)
     
 def main():
     x1 = st.number_input("Enter the Starting point of x: ")
