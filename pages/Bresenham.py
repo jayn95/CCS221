@@ -45,10 +45,10 @@ def bres(x1,y1,x2,y2):
     st.pyplot(plt)
     
 def main():
-    x1 = st.number_input("Enter the Starting point of x: ")
-    y1 = st.number_input("Enter the Starting point of y: ")
-    x2 = st.number_input("Enter the end point of x: ")
-    y2 = st.number_input("Enter the end point of y: ")
+    x1 = st.number_input("Enter the Starting point of x: ", min_value=0, max_value=1000, value=0)
+    y1 = st.number_input("Enter the Starting point of y: ", min_value=0, max_value=1000, value=0)
+    x2 = st.number_input("Enter the end point of x: ", min_value=0, max_value=1000, value=0)
+    y2 = st.number_input("Enter the end point of y: ", min_value=0, max_value=1000, value=0)
     color = ".r"
 
     bres(x1, y1, x2, y2)
